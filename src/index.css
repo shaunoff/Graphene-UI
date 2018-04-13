@@ -1,0 +1,8 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
+}
+pre > code {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
