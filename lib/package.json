@@ -1,11 +1,11 @@
 {
   "name": "ps-react",
   "author": {
-    "name": "Cory House",
-    "email": "cory@reactjsconsulting.com",
-    "url": "http://reactjsconsulting.com/"
+    "name": "Shaun Hutch",
+    "email": "shaundavidhutch@gmail.com",
+    "url": "http://shaunhutch.com"
   },
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "./index.js",
   "keywords": [
     "components",
@@ -14,10 +14,11 @@
     "toolkit",
     "pluralsight"
   ],
-  "homepage": "http://coryhouse.github.io/ps-react/",
+  "homepage": "http://shaunoff.github.io/Graphene-UI/",
   "dependencies": {
-    "highlight.js": "^9.10.0",
+    "prismjs": "^1.14.0",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "react-router-dom": "^4.2.2"
   }
 }
