@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /** Navbar component sist at the top of the page */
-const NavBar = () => (
+export const NavBar = () => (
 	<div style={styles.container}>
 		<img style={{maxHeight: '80%'}} src='./Graphene.png' />
 	</div>

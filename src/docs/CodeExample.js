@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Prism from 'prismjs'
-import 'prismjs/themes/prism-tomorrow.css'
+import './prismStyle.css'
 // This way is easy, but adds 170K gzipped to bundle since all langs are included.
 // import Highlight from 'react-highlight';
 
@@ -15,7 +15,7 @@ class CodeExample extends React.Component {
   render() {
     return (
       <pre ref={ref => { this.element = ref }}>
-        <code className="language-javascript">
+        <code className="language-jsx">
           {this.props.children}
         </code>
       </pre>

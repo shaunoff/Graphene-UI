@@ -2,6 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var chalk = require('chalk');
 var parse = require('react-docgen').parse;
+var findAll = require('react-docgen').resolver.findAllComponentDefinitions;
 var chokidar = require('chokidar');
 
 var paths = {
@@ -35,11 +36,13 @@ function generate(paths) {
 
 function getComponentData(paths, componentName) {
   var content = readFile(path.join(paths.components, componentName, componentName + '.js'));
-  var info = parse(content);
+  var info = parse(content, findAll);
+  // console.log('compkkkkkkkonent', info.map(comp => ))
   return {
     name: componentName,
     description: info.description,
     props: info.props,
+    comps: info,
     code: content,
     examples: getExampleData(paths.examples, componentName)
   }
