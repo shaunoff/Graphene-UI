@@ -2,13 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Example from './Example';
 import Props from './Props';
-import Tabs from '../components/Tabs'
-import Segment from '../components/Segment'
-import Divider from '../components/Divider'
+import {Tabs, Segment, Divider} from 'graphene-ui'
 
 const ComponentPage = ({component}) => {
   const {name, description, props, comps, examples} = component;
-  console.log("hfdjkjfhjkd",component.comps)
   return (
     <div style={{width: '100%'}}>
       <h2 style={{color: '#6bada7'}}>{name}</h2>
@@ -33,7 +30,7 @@ const ComponentPage = ({component}) => {
           <Tabs>
             <Tabs.TabList>
               {comps.reverse().map((comp,index) => (
-                <Tabs.Tab title={`${name}${index !== 0 ? '.'+comp.displayName : ""}`}/>
+                <Tabs.Tab key={comp.displayName} title={`${name}${index !== 0 ? '.'+comp.displayName : ""}`}/>
               ))}
             </Tabs.TabList>
             <Tabs.TabPanel>

@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorld from 'ps-react/HelloWorld';
+import {HelloWorld} from 'graphene-ui';
 
 /** Custom message */
 export default function ExampleHelloWorld() {

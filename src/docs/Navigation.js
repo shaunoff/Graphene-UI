@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink} from "react-router-dom";
-import SideNav from '../components/SideNav'
+import {SideNav} from 'graphene-ui'
 
 class Navigation extends React.Component {
   state = {
