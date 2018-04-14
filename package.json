@@ -1,15 +1,15 @@
 {
-  "name": "ps-react-build-template",
-  "version": "1.0.0",
+  "name": "graphene-ui",
+  "version": "0.1.0",
   "main": "./lib/index.js",
   "private": true,
   "engines": {
     "node": ">=4.0.0"
   },
   "author": {
-    "name": "Cory House",
-    "email": "cory@reactjsconsulting.com",
-    "url": "http://reactjsconsulting.com/"
+    "name": "Shaun Hutch",
+    "email": "shaundavidhutch@gmail.com",
+    "url": "http://shaunhutch.com"
   },
   "files": [
     "lib"
@@ -22,7 +22,6 @@
     "pluralsight"
   ],
   "dependencies": {
-    "highlight.js": "^9.10.0",
     "prismjs": "^1.14.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
@@ -80,7 +79,7 @@
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.2"
   },
-  "homepage": "http://coryhouse.github.io/ps-react/",
+  "homepage": "http://shaunoff.github.io/Graphene-UI/",
   "scripts": {
     "prestart": "npm run gen:docs",
     "start": "npm-run-all --parallel start:docs gen:docs-watch",
