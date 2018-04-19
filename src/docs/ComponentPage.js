@@ -11,20 +11,7 @@ const ComponentPage = ({component}) => {
       <h2 style={{color: '#6bada7'}}>{name}</h2>
       <p>{comps[0].description}</p>
       <Divider style={{paddingRight: '50px'}}/>
-      <div style={{display: 'grid', gridColumnGap: '30px', gridTemplateColumns: 'calc(40% - 15px) calc(60% - 15px)'}}>
-        <div>
-          <h3>Example{examples.length > 1 && "s"}</h3>
-          <Segment>
-
-
-            {
-              examples.length > 0 ?
-              examples.map( example => <Example key={example.name} example={example} componentName={name} /> ) :
-              "No examples exist."
-            }
-          </Segment>
-        </div>
-
+      <div style={{display: 'flex', flexDirection: 'column'}}>
         <div>
           <h3>Props</h3>
           <Tabs>
@@ -47,6 +34,19 @@ const ComponentPage = ({component}) => {
               ))}
             </Tabs.TabPanel>
           </Tabs>
+        </div>
+        <div>
+          <h3>Example{examples.length > 1 && "s"}</h3>
+          <div style={{height: '100%', width: '100%', display: 'grid', gridTemplateColumns: '600px auto'}}>
+            <Segment>
+              {
+                examples.length > 0 ?
+                examples.map( example => <Example key={example.name} example={example} componentName={name} /> ) :
+                "No examples exist."
+              }
+            </Segment>
+          </div>
+
         </div>
       </div>
     </div>

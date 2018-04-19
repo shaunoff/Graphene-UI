@@ -5,11 +5,13 @@ import ComponentPage from './ComponentPage';
 import componentData from '../../config/componentData';
 import NavBar from '../components/NavBar'
 import GrapheneTheme from '../styles/GrapheneTheme'
+
 export default class Docs extends React.Component {
   render() {
     return (
       <GrapheneTheme>
         <Router>
+
           <div style={{minHeight: '100vh', width: '100%', background: 'rgb(248, 250, 251)'}}>
             {/* <NavBar/> */}
             <div style={{height: '100%', width: '100%', display: 'grid', gridTemplateColumns: '180px auto'}}>
