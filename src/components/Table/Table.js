@@ -20,7 +20,6 @@ const Body = ({children}) => {
 
 const Row = ({children,key,index}) => (
 		<div key={index} style={{...styles.rowContent,...(index % 2 === 0 ? styles.evenRow : null)}}>
-			{console.log(children)}
 			{children}
 		</div>
 );
