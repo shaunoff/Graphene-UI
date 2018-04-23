@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './styles'
 import PropTypes from 'prop-types';
+
 const TabList = ({activeIndex,children,changeIndex}) => {
 	const childrenWithProps = React.Children.map(children, (child,index) => React.cloneElement(child, {activeIndex,index,changeIndex}))
 	return <div style={styles.tabsContainer}>{childrenWithProps}</div>
@@ -21,9 +22,8 @@ const Panel = ({activeIndex,children,index}) => {
 	return null
 }
 const Tab = ({activeIndex,children,title,index, changeIndex}) => {
-	const childrenWithProps = React.Children.map(children, (child) => React.cloneElement(child, {activeIndex}))
 	return (
-		<div onClick={()=>changeIndex(index)}style={{...styles.tabsBlock, ...(activeIndex===index ? styles.activeTabsBlock : null)}}>
+		<div onClick={()=>changeIndex(index)} style={{...styles.tabsBlock, ...(activeIndex===index ? styles.activeTabsBlock : null)}}>
 			<span style={{fontWeight: 500, color: "rgb(88, 88, 88)"}}>{title}</span>
 		</div>
 	)

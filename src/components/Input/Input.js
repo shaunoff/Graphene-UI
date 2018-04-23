@@ -27,7 +27,7 @@ class Input extends React.Component {
 
   render() {
     const { value, error, label,focus } = this.state;
-    const { predicted, locked } = this.props;
+    const { locked } = this.props;
     const active = focus || value.length
 		console.log(active)
     return (

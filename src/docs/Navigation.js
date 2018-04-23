@@ -1,25 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { NavLink} from "react-router-dom";
+import { NavLink,withRouter} from "react-router-dom";
 import {SideNav} from 'graphene-ui'
 
 class Navigation extends React.Component {
-  state = {
-    activeTab: null
-  }
-  activeTab = (match,location,name) => {
-    if(match && name !== this.state.activeTab){
-      this.setState({activeTab: name})
-    }
-  }
   render(){
     return (
       <SideNav>
-        <img style={{marginTop: "15px",marginBottom: "30px", maxWidth: '80%'}} src="Graphene.png"/>
+        <img style={{marginTop: "15px",marginBottom: "30px", maxWidth: '80%'}} src="Graphene.png" alt="Graphene.png"/>
         {this.props.components.map( name => {
           return (
-              <NavLink style={{ textDecoration: 'none' }} isActive={(match,location)=>{this.activeTab(match,location,name)}} key={name} to={`/${name}`}>
-                <SideNav.Tab active={this.state.activeTab === name} title={name}/>
+              <NavLink style={{ textDecoration: 'none' }} key={name} to={`/${name}`}>
+                <SideNav.Tab active={this.props.location.pathname === `/${name}`} title={name}/>
               </NavLink>
           )
         })}
@@ -28,4 +19,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default withRouter(Navigation);

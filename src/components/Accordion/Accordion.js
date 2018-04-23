@@ -15,7 +15,7 @@ const Section = (props) => (
 //   test: PropTypes.bool
 // };
 
-
+/** A super lame component that says Hello with a custom message. */
 class Accordion extends Component {
   static Section = Section
   // static Content = Content
@@ -31,7 +31,6 @@ class Accordion extends Component {
     else{
       this.setState(
         ({activeIndex}) => {
-          console.log('gfhfghjf',activeIndex.filter(nums => nums === index))
           return activeIndex.includes(index) ?
           {activeIndex : activeIndex.filter(nums => nums !== index)}
           :
@@ -45,9 +44,7 @@ class Accordion extends Component {
     activeIndex : this.state.activeIndex
   })
   render() {
-    console.log(this.state)
-    const {activeIndex} = this.state
-    const {handleClick,getProps} = this
+    const {getProps} = this
     return (
       <div style={{borderRadius: '8px', border: '2px solid #ccc'}}>
         {this.props.children({getProps})}

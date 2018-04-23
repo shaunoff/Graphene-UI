@@ -1,4 +1,4 @@
-export {default as HelloWorld} from './HelloWorld';
+// export {default as HelloWorld} from './HelloWorld';
 export {default as NavBar} from './NavBar';
 export {default as SideNav} from './SideNav';
 export {default as Tabs} from './Tabs';

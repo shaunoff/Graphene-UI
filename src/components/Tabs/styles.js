@@ -19,7 +19,6 @@ const styles = {
 		borderBottom: '2px solid white',
 		borderTopRightRadius: '8px',
 		borderTopLeftRadius: '8px',
-		background: 'blue',
 		marginLeft: '10px',
 		display: 'flex',
 		alignItems: 'center',

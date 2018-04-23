@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Radium from 'radium'
 
 const popAnimation = Radium.keyframes({
@@ -32,16 +32,13 @@ const styles = {
   color: 'red'
   }
 };
-const getButtonProps = () => {
-
-}
 
 class Button extends React.Component {
   handleClick = () => {
     console.log("clicked oioio")
   }
 	getButtonProps = () =>{
-		const {onClick, style, disabled} = this.props
+		const {onClick, style} = this.props
 		return {
 			disabled: this.props.disabled,
 			style : {...styles.base, ...style},
@@ -52,7 +49,6 @@ class Button extends React.Component {
 		}
 	}
   render() {
-		const {onClick} = this.props
     return (
       <button
 				{...this.getButtonProps()}

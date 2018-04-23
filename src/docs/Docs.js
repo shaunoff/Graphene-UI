@@ -1,9 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, withRouter} from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import Navigation from './Navigation';
 import ComponentPage from './ComponentPage';
 import componentData from '../../config/componentData';
-import NavBar from '../components/NavBar'
 import GrapheneTheme from '../styles/GrapheneTheme'
 
 export default class Docs extends React.Component {
