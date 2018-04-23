@@ -8,3 +8,4 @@ export {default as Input} from './Input';
 export {default as Segment} from './Segment';
 export {default as Button} from './Button';
 export {default as Accordion} from './Accordion';
+export {default as Carousel} from './Carousel';

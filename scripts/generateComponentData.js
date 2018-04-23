@@ -10,7 +10,7 @@ var paths = {
   components: path.join(__dirname, '../src', 'components'),
   output: path.join(__dirname, '../config', 'componentData.js')
 };
-
+console.log('HJHJHJKHKJHKJHKJHKJ', paths.components)
 const enableWatchMode = process.argv.slice(2) == '--watch';
 if (enableWatchMode) {
   // Regenerate component metadata when components or examples change.
@@ -37,7 +37,6 @@ function generate(paths) {
 function getComponentData(paths, componentName) {
   var content = readFile(path.join(paths.components, componentName, componentName + '.js'));
   var info = parse(content, findAll);
-  // console.log('compkkkkkkkonent', info.map(comp => ))
   return {
     name: componentName,
     description: info.description,

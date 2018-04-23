@@ -5,6 +5,7 @@ import Props from './Props';
 import {Tabs, Segment, Divider} from 'graphene-ui'
 
 const ComponentPage = ({component}) => {
+  console.log(component)
   const {name, description, props, comps, examples} = component;
   return (
     <div style={{width: '100%'}}>
@@ -37,14 +38,19 @@ const ComponentPage = ({component}) => {
         </div>
         <div>
           <h3>Example{examples.length > 1 && "s"}</h3>
-          <div style={{height: '100%', width: '100%', display: 'grid', gridTemplateColumns: '600px auto'}}>
-            <Segment>
+          <div style={{height: '100%', width: '100%', display: 'flex', flexDirection:'column'}}>
+
               {
                 examples.length > 0 ?
-                examples.map( example => <Example key={example.name} example={example} componentName={name} /> ) :
+                examples.map( example => (
+                  <Segment style={{marginBottom: '20px'}}>
+                    <Example key={example.name} example={example} componentName={name} />
+                  </Segment>
+                  )
+                ) :
                 "No examples exist."
               }
-            </Segment>
+
           </div>
 
         </div>

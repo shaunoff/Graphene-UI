@@ -9,7 +9,7 @@ export const NavBar = ({style}) => (
 		{value => {
 			return (
 				<div style={{...value, ...styles.container, ...style}}>
-					<img style={{maxHeight: '80%'}} src='./Graphene.png' />
+					<img style={{maxHeight: '80%'}} src='Graphene.png' />
 					hello
 				</div>
 			)

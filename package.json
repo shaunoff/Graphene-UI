@@ -21,11 +21,14 @@
     "pluralsight"
   ],
   "dependencies": {
+    "gsap": "^1.20.4",
     "prismjs": "^1.14.0",
     "radium": "^0.24.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "react-simple-line-icons": "^1.0.8",
+    "react-transition-group": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",

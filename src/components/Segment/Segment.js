@@ -11,8 +11,8 @@ const styles = {
 	boxSizing: 'border-box'
 }
 
-const Segment = ({children}) => (
-	<div style={styles}>
+const Segment = ({children,style}) => (
+	<div style={{...styles,...style}}>
 		{children}
 	</div>
 );

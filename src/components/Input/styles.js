@@ -18,7 +18,7 @@ const styles = {
 		position: 'relative',
 		top: '30px',
 		left: '5px',
-		transition: 'top 400ms ease-out, font-size 400ms ease-out'
+		transition: 'top 200ms ease-out, font-size 400ms ease-out'
 	},
 	input: {
 		width: "100%",

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {Accordion} from 'graphene-ui'
 
-/** A basic accordion */
-class BasicAccordion extends Component {
+/** Non-Exlcusive Accordion */
+class NonExclusive extends Component {
 	render() {
 		return (
-			<Accordion>
+			<Accordion exclusive={false}>
 				{({getProps}) => (
 					<React.Fragment>
 						<Accordion.Section {...getProps()} index={0} title="Section 1">
@@ -33,4 +33,4 @@ class BasicAccordion extends Component {
 
 }
 
-export default BasicAccordion;
+export default NonExclusive;

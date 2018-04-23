@@ -1,27 +1,44 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import SectionComponent from './Section'
 
-
-const Section = ({activeIndex,index,title,children,handleClick}) => (
-  <div style={{borderTop: index !== 0 && "2px solid #ccc", padding: '15px' }}>
-    <div style={{fontWeight: 500, color: "rgb(88, 88, 88)"}} onClick={()=>{handleClick(index)}}>
-      {title}
-    </div>
-    <div>
-      {activeIndex === index && children}
-    </div>
-  </div>
+const Section = (props) => (
+  <SectionComponent {...props}/>
 )
+
+// Section.propTypes = {
+//   /** The index of the current index */
+//   activeIndex: PropTypes.string,
+//   /** Indicate whether there should only be pne panel open */
+//   exclusive: PropTypes.bool,
+//   /** retuyghdfgjhdsgfjhd */
+//   test: PropTypes.bool
+// };
+
 
 class Accordion extends Component {
   static Section = Section
   // static Content = Content
   state = {
-    activeIndex: 0
+    activeIndex: []
   }
   handleClick = (index) => {
-    this.setState(
-      ({activeIndex}) => ({activeIndex: activeIndex === index ? -1 : index})
-    )
+    if(this.props.exclusive){
+      this.setState(
+        ({activeIndex}) => ({activeIndex: activeIndex.includes(index) ? [] : [index]})
+      )
+    }
+    else{
+      this.setState(
+        ({activeIndex}) => {
+          console.log('gfhfghjf',activeIndex.filter(nums => nums === index))
+          return activeIndex.includes(index) ?
+          {activeIndex : activeIndex.filter(nums => nums !== index)}
+          :
+          {activeIndex: [...activeIndex,index]}
+        }
+      )
+    }
   }
   getProps = () => ({
     handleClick: this.handleClick,
@@ -40,5 +57,18 @@ class Accordion extends Component {
   }
 
 }
+
+Accordion.propTypes = {
+  /** The index of the current index */
+  activeIndex: PropTypes.array,
+  /** Indicate whether there should only be pne panel open */
+  exclusive: PropTypes.bool,
+  /** retuyghdfgjhdsgfjhd */
+  test: PropTypes.bool
+};
+Accordion.defaultProps = {
+  exclusive: true
+};
+
 
 export default Accordion;
