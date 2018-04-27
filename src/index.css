@@ -6,3 +6,5 @@ pre > code {
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
 }
+
+/* button:focus{outline-style: none;} */

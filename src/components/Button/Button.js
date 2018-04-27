@@ -25,7 +25,8 @@ class Button extends React.Component {
 		return {
 			disabled: this.props.disabled,
 			style : {...(styles(this.props))},
-			onClick: ()=>{
+			onMouseDown: (event)=>{
+        event.preventDefault()
 				onClick && onClick()
 				this.handleClick()
 			}
@@ -33,11 +34,11 @@ class Button extends React.Component {
 	}
   render() {
     return (
-      <div style={{display: 'flex', alignItems: 'center'}}>
+      <div style={{display: 'flex', alignItems: 'center',margin: '10px 10px 10px 0px'}}>
         <button
   				{...this.getButtonProps()}
   			>
-          <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center',height: '40px' ,padding: "0px 10px"}}>
+          <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center',height: '35px' ,padding: "0px 10px"}}>
             {this.props.icon && (
               <div style={{position: 'relative', top: '2px', left: '-10px', marginRight: '0px'}}>
                 <Icon color="white" name={this.props.icon} />
@@ -47,7 +48,7 @@ class Button extends React.Component {
           </div>
         </button>
         {this.props.count && (
-          <div style={{color: '#6bada7', fontWeight: '600', textAlign: 'center',width: '20px',border: '2px solid #6bada7', padding: '9px 6px 10px 6px', borderRadius: '0px 4px 4px 0px'}}>
+          <div style={{color: '#6bada7', fontWeight: '600', textAlign: 'center',width: '20px',border: '2px solid #6bada7', padding: '7px 6px 7px 6px', borderRadius: '0px 4px 4px 0px'}}>
             {this.props.count}
           </div>
         )
