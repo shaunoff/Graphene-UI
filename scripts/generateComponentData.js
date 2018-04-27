@@ -10,7 +10,7 @@ var paths = {
   components: path.join(__dirname, '../src', 'components'),
   output: path.join(__dirname, '../config', 'componentData.js')
 };
-console.log('HJHJHJKHKJHKJHKJHKJ', paths.components)
+
 const enableWatchMode = process.argv.slice(2) == '--watch';
 if (enableWatchMode) {
   // Regenerate component metadata when components or examples change.

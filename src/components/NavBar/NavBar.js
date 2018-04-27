@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GrapheneContext from '../../styles/GrapheneContext'
+//import GrapheneContext from '../../styles/GrapheneContext'
 /** Navbar component sist at the top of the page */
 
 const styles = {
@@ -15,17 +15,10 @@ const styles = {
 }
 
 export const NavBar = ({style}) => (
-	<GrapheneContext.Consumer>
-		{value => {
-			return (
-				<div style={{...value, ...styles.container, ...style}}>
-					<img style={{maxHeight: '80%'}} src='Graphene.png' alt='Graphene.png'/>
-					hello
-				</div>
-			)
-		}}
-	</GrapheneContext.Consumer>
-
+		<div style={{...styles.container, ...style}}>
+			<img style={{maxHeight: '80%'}} src='Graphene.png' alt='Graphene.png'/>
+			hello
+		</div>
 )
 
 NavBar.propTypes = {

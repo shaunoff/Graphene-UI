@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import Navigation from './Navigation';
 import ComponentPage from './ComponentPage';
 import componentData from '../../config/componentData';
-import GrapheneTheme from '../styles/GrapheneTheme'
+// import GrapheneTheme from '../styles/GrapheneTheme'
 
 export default class Docs extends React.Component {
   render() {
     return (
-      <GrapheneTheme>
         <Router>
 
           <div style={{minHeight: '100vh', width: '100%', background: 'rgb(248, 250, 251)'}}>
@@ -28,7 +27,6 @@ export default class Docs extends React.Component {
             </div>
           </div>
         </Router>
-      </GrapheneTheme>
     )
   }
 }
