@@ -35,7 +35,8 @@ class Section extends React.Component {
 						justifyContent: 'space-between',
 						alignItems: 'center',
 						fontWeight: 500,
-						color: 'rgb(88, 88, 88)'
+						color: 'rgb(88, 88, 88)',
+						maxHeight: '25px'
 					}}
 					onClick={() => {
 						handleClick(index);

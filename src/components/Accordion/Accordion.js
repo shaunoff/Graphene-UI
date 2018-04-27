@@ -46,10 +46,11 @@ class Accordion extends Component {
   render() {
     const {getProps} = this
     return (
-      <div style={{borderRadius: '8px', border: '2px solid #ccc'}}>
-        {this.props.children({getProps})}
+      <div>
+        <div style={{borderRadius: '8px', border: '2px solid #ccc',width: this.props.width}}>
+            {this.props.children({getProps})}
+        </div>
       </div>
-
     );
   }
 
@@ -61,10 +62,11 @@ Accordion.propTypes = {
   /** Indicate whether there should only be pne panel open */
   exclusive: PropTypes.bool,
   /** retuyghdfgjhdsgfjhd */
-  test: PropTypes.bool
+  width: PropTypes.string
 };
 Accordion.defaultProps = {
-  exclusive: true
+  exclusive: true,
+  width: '100%'
 };
 
 

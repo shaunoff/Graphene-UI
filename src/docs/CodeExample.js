@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Prism from 'prismjs'
-import 'prismjs/themes/prism-okaidia.css'
-//import './prismStyle.css'
+//import 'prismjs/themes/prism-okaidia.css'
+import './prismStyle.css'
 // This way is easy, but adds 170K gzipped to bundle since all langs are included.
 // import Highlight from 'react-highlight';
 
