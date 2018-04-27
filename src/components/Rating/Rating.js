@@ -45,6 +45,7 @@ Rating.propTypes = {
 Rating.defaultProps = {
   stars: 5,
   score: 1,
+  onClick: ()=>{}
 };
 
 export default Radium(Rating)

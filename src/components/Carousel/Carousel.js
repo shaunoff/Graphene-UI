@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TimelineMax, Power3 } from 'gsap';
 import { Transition } from 'react-transition-group';
-import Icon from 'react-simple-line-icons/dist';
+import {Icon} from 'graphene-ui';
 
 const styles = {
 	container: {
@@ -147,14 +147,14 @@ class Carousel extends Component {
 					style={{ display: 'flex', justifyContent: 'center' }}
 					onClick={this.handleBack}
 				>
-					<Icon color="#585858" size="large" name="arrow-left-circle" />
+					<Icon size="30px" name="arrowLeftCircle" />
 				</div>
 				<div style={styles.panel}>{children}</div>
 				<div
 					style={{ display: 'flex', justifyContent: 'center' }}
 					onClick={this.handleChange}
 				>
-					<Icon color="#585858" size="large" name="arrow-right-circle" />
+					<Icon size="30px" name="arrowRightCircle" />
 				</div>
 				<div
 					style={{

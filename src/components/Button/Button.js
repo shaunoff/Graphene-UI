@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium'
-import Icon from 'react-simple-line-icons/dist';
+import {Icon} from 'graphene-ui';
 
 
 const popAnimation = Radium.keyframes({
@@ -47,15 +47,14 @@ class Button extends React.Component {
 		}
 	}
   render() {
-    console.log(this.props)
     return (
       <div style={{display: 'flex', alignItems: 'center'}}>
         <button
   				{...this.getButtonProps()}
   			>
-          <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center',padding: '8px',}}>
+          <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center',height: '40px' ,padding: "0px 10px"}}>
             {this.props.icon && (
-              <div style={{position: 'relative', marginRight: '10px'}}>
+              <div style={{position: 'relative', top: '2px', left: '-10px', marginRight: '0px'}}>
                 <Icon color="white" name={this.props.icon} />
               </div>
             )}
@@ -63,7 +62,7 @@ class Button extends React.Component {
           </div>
         </button>
         {this.props.count && (
-          <div style={{color: '#6bada7', fontWeight: '600', textAlign: 'center',width: '20px',border: '2px solid #6bada7', padding: '7px 6px 8px 6px', borderRadius: '0px 4px 4px 0px'}}>
+          <div style={{color: '#6bada7', fontWeight: '600', textAlign: 'center',width: '20px',border: '2px solid #6bada7', padding: '9px 6px 10px 6px', borderRadius: '0px 4px 4px 0px'}}>
             {this.props.count}
           </div>
         )
