@@ -1,16 +1,44 @@
-# Pluralsight React Components
+# Graphene-UI
 
-A library of React components created in "Creating Reusable React Components" on Pluralsight.
+Declarative React UI component library & toolkit, built with GSAP.
 
-## Install
+```sh
+npm i graphene-ui
 ```
-npm install ps-react
+
+Rebass is a library of highly-composable, UI components and tools for React,
+built with inline styled-components to keep component styles isolated and customizable without the need for CSS.
+
+Graphene‘s API facilitates rapid production of powerful and responsive applications.
+
+
+## Getting Started
+
+```jsx
+import React from 'react'
+import { GrapheneTheme, Segment, Button } from 'graphene-ui'
+
+const App = props => (
+  <GrapheneTheme>
+    <Heading>Hello</Heading>
+    <Button>Click Here</Button>
+  </GrapheneTheme>
+)
 ```
 
-## Docs
-[Component documentation](http://coryhouse.github.io/ps-react)
+## Features
 
-## Component Hall of Fame 🎉
-Here's a list of components built by your fellow viewers!
+- Responsive style props using css-grid and flexbox
+- Configurable Global themes using the Context API
+- Configurable Declarative components
 
-Submit a pull request to add your link here... :)
+
+## Documentation
+
+https://shaunoff.github.io/Graphene-UI/
+
+
+#### v0.0.2
+
+
+---

@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium'
-import Icon from 'react-simple-line-icons';
+import Icon from 'react-simple-line-icons/dist';
 
 
 const popAnimation = Radium.keyframes({

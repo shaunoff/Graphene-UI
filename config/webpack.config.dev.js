@@ -82,7 +82,7 @@ module.exports = {
       'graphene-ui': path.resolve(__dirname, '../src/components')
     }
   },
-  
+
   module: {
     // First, run the linter.
     // It's important to do this before Babel processes the JS.

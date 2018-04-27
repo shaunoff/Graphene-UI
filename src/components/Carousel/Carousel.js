@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TimelineMax, Power3 } from 'gsap';
 import { Transition } from 'react-transition-group';
-import Icon from 'react-simple-line-icons';
+import Icon from 'react-simple-line-icons/dist';
 
 const styles = {
 	container: {
