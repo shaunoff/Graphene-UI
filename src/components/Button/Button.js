@@ -1,11 +1,5 @@
 import React from 'react';
-import Radium from 'radium'
 import {Icon} from 'graphene-ui';
-
-
-const popAnimation = Radium.keyframes({
-  '50%': { transform: 'scale(1.2)' }
-})
 
 const styles = ({count}) => {
   return {
@@ -18,15 +12,6 @@ const styles = ({count}) => {
       border: '0px',
       color: 'white',
       margin: '10 0px 10px 10px',
-      ':hover': {
-        animation: 'x 0.8s ease',
-        animationName: popAnimation
-      },
-      ':disabled': {
-        background: '#ccc',
-        color: "white",
-        cursor: "not-allowed"
-      }
   }
 }
 
@@ -74,4 +59,4 @@ class Button extends React.Component {
     );
   }
 }
-export default Radium(Button)
+export default Button
