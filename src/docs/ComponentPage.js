@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Example from './Example';
 import Props from './Props';
+import Icons from './Icons'
 import {Tabs, Segment, Divider} from 'graphene-ui'
 
 const getMainComp = (comps, name) => {
@@ -23,13 +24,14 @@ const compsArray = (comps,name) => {
 const ComponentPage = ({component}) => {
   const {name, comps, examples} = component;
   const sortedComps = compsArray(comps,name)
-  console.log(sortedComps)
+  console.log(name)
   return (
     <div style={{width: '100%'}}>
       <h2 style={{color: '#6bada7'}}>{name}</h2>
       <p>{getMainComp(comps,name).description}</p>
       <Divider style={{paddingRight: '50px'}}/>
       <div style={{display: 'flex', flexDirection: 'column'}}>
+        {name === 'Icon' && <Icons/>}
         <div>
           <h3>Props</h3>
           <Tabs>

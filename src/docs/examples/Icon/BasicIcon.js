@@ -5,7 +5,7 @@ import {Icon} from 'graphene-ui'
 class BasicIcon extends Component {
 	render() {
 		return (
-			<Icon name="arrowLeftCircle"/>
+			<Icon name="comment"/>
 		);
 	}
 

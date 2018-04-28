@@ -5,7 +5,7 @@
     "email": "shaundavidhutch@gmail.com",
     "url": "http://shaunhutch.com"
   },
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "./index.js",
   "keywords": [
     "components",
