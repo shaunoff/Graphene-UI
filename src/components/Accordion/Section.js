@@ -1,6 +1,7 @@
 import React from 'react';
 import { TimelineMax } from 'gsap';
 import { Transition } from 'react-transition-group';
+import {Icon} from 'graphene-ui'
 
 const duration = 400;
 
@@ -43,13 +44,8 @@ class Section extends React.Component {
 					}}
 				>
 					{title}
-					<img
-						style={{ height: '14px' }}
-						src={`icons/${
-							activeIndex.includes(index) ? 'down' : 'right'
-						}-arrow.svg`}
-						alt="arrow"
-					/>
+					<Icon name={activeIndex.includes(index) ? 'caratDown' : 'caratLeft'}/>
+
 				</div>
 				<Transition
 					timeout={duration}
