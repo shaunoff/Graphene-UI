@@ -5,7 +5,7 @@
     "email": "shaundavidhutch@gmail.com",
     "url": "http://shaunhutch.com"
   },
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "./index.js",
   "keywords": [
     "components",
@@ -19,6 +19,7 @@
     "gsap": "^1.20.4",
     "prismjs": "^1.14.0",
     "radium": "^0.24.0",
+    "rc-slider": "^8.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-router-dom": "^4.2.2",

@@ -9,7 +9,7 @@ class Icon extends Component {
 
     return(
       <svg
-				xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" style={{width: `${size}`,height: `${size}`,enableBackground:'new 0 0 449.406 449.406', padding: '5px'}} xmlSpace="preserve">
+				xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 20 20" style={{width: `${size}`,height: `${size}`,enableBackground:'new 0 0 449.406 449.406', padding: '5px', display: 'flex', alignItems: 'center'}} xmlSpace="preserve">
 	      <g>
 					{icons[this.props.name].paths && icons[this.props.name].paths.map(path => (
 						<path key={path} d={path} fill={color}/>

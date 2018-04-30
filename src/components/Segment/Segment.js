@@ -7,7 +7,6 @@ const styles = {
 	background: 'white',
 	border: "2px solid #ccc",
 	borderRadius: '8px',
-	overflow: 'scroll',
 	boxSizing: 'border-box'
 }
 

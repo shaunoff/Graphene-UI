@@ -4,7 +4,7 @@ import { Button } from 'graphene-ui';
 /** Button with an Counter */
 export default function BasicButton() {
 	return (
-		<Button count={10} icon="like" onClick={() => console.log('clicked')}>
+		<Button iconPosition="right" count={10} icon="like" onClick={() => console.log('clicked')}>
 			Click
 		</Button>
 	);

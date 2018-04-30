@@ -12,4 +12,6 @@ export {default as Carousel} from './Carousel';
 export {default as Rating} from './Rating';
 export {default as Icon} from './Icon';
 export {default as Switch} from './Switch';
-export {default as Slider} from './Slider';
+export {default as Popup} from './Popup';
+export {default as Select} from './Select';
+export {default as Avatar} from './Avatar';

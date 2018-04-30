@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styles from './styles';
 
-const Header = ({children}) => (
-		<div style={{...styles.row,...styles.header}}>
+const Header = ({children,compact}) => (
+		<div style={{...styles.row,...styles.header,...(compact && styles.compact)}}>
 			{children}
 		</div>
 
@@ -18,8 +18,8 @@ const Body = ({children}) => {
 }
 
 
-const Row = ({children,key,index}) => (
-		<div key={index} style={{...styles.rowContent,...(index % 2 === 0 ? styles.evenRow : null)}}>
+const Row = ({children,key,index,compact}) => (
+		<div key={index} style={{...styles.rowContent,...(index % 2 === 0 ? styles.evenRow : null), ...(compact && styles.compact)}}>
 			{children}
 		</div>
 );

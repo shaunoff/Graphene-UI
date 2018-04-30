@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon} from 'graphene-ui';
 
-const styles = ({count}) => {
+const styles = ({count,style}) => {
   return {
       fontFamily: 'quicksand',
       fontSize: '16px',
@@ -12,6 +12,7 @@ const styles = ({count}) => {
       border: '0px',
       color: 'white',
       margin: '10 0px 10px 10px',
+      ...style
   }
 }
 
@@ -32,19 +33,35 @@ class Button extends React.Component {
 			}
 		}
 	}
+  renderLeftIcon(){
+    const children = React.Children.count(this.props.children)
+    return (
+      <div style={{position: 'relative',left: children === 0 ? '0px' : "-10px", marginRight: '0px'}}>
+        <Icon color="white" name={this.props.icon} />
+      </div>
+    )
+  }
+  renderRightIcon(){
+    const children = React.Children.count(this.props.children)
+    return (
+      <div style={{position: 'relative', left: children === 0 ? '0px' : "10px", marginRight: '0px'}}>
+        <Icon color="white" name={this.props.icon} />
+      </div>
+    )
+  }
   render() {
+    const children = React.Children.count(this.props.children)
     return (
       <div style={{display: 'flex', alignItems: 'center',margin: '10px 10px 10px 0px'}}>
-        <button
+        <button style={{padding: '0px'}}
   				{...this.getButtonProps()}
   			>
-          <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center',height: '35px' ,padding: "0px 10px"}}>
-            {this.props.icon && (
-              <div style={{position: 'relative', top: '2px', left: '-10px', marginRight: '0px'}}>
-                <Icon color="white" name={this.props.icon} />
-              </div>
-            )}
-            {this.props.children}
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center',height: '35px' ,padding: "0px 6px"}}>
+            {this.props.icon && this.props.iconPosition !== 'right' && this.renderLeftIcon()}
+            <div>
+              {this.props.children}
+            </div>
+            {this.props.icon && this.props.iconPosition === 'right' && this.renderRightIcon()}
           </div>
         </button>
         {this.props.count && (

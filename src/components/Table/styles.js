@@ -21,6 +21,11 @@ const styles = {
 		alignItems: 'center',
 		borderBottom: '2px solid #ccc'
 	},
+	compact: {
+		fontSize: '12px',
+		height: '24px',
+		minHeight: '20px'
+	},
 	evenRow: {
 		background: "#f6f6f6"
 	},
