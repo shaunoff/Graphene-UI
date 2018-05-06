@@ -22,13 +22,6 @@ const styles = {
 	}
 };
 
-// animateOpen = () => {
-//   var animation = new TimelineMax()
-//   animation
-//     .set(this.container, {opacity: 0})
-//     .from(this.container, duration/1000, {height: 0})
-//     .to(this.container, duration/1000, { opacity: 1 },`-=${duration/1000}`)
-// }
 class Panel extends Component {
 	forwardEnter = () => {
 		this.props.handleAnimate();

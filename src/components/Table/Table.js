@@ -26,7 +26,7 @@ const Row = ({children,key,index,compact}) => (
 
 const HeaderCell = ({children,title,style}) => (
 	<div style={{...styles.headerCell, ...(style ? style : {flex: 1})}}>
-		<div>{title || children}</div>
+		{title || children}
 	</div>
 );
 
