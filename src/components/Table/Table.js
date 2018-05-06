@@ -32,7 +32,7 @@ const HeaderCell = ({children,title,style}) => (
 
 const Cell = ({children,style}) => (
 	<div style={style ? style : {flex: 1}}>
-		<div>{children}</div>
+		{children}
 	</div>
 );
 
